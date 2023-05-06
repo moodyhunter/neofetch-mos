@@ -958,6 +958,10 @@ get_os() {
             os=Windows
         ;;
 
+        MOS)
+            os=MOS
+            ;;
+
         *)
             printf '%s\n' "Unknown OS detected: '$kernel_name', aborting..." >&2
             printf '%s\n' "Open an issue on GitHub to add support for your OS." >&2
@@ -11527,6 +11531,31 @@ oMMMMmMMMMNds:.+MMMmmMMN/.-odNMMMMmMMMM+
 EOF
                 ;;
 
+                "MOS"*)
+                    set_colors 4 7
+                    read -rd '' ascii_data <<'EOF'
+${c1}          __
+        HMMMMH.
+       MMMMMMMH
+       HMMMMMH    GGG
+   :=:   MMM    GGGGGG
+  C@@@G   ${c3}\\\\${c1}     CGG
+   C@@G_   ${c3}\|   /${c3}
+       ^\|${c2}^@@@@G${c3}
+         ${c2}#@@@@@@@${c3}
+          ${c2}@@@@GGG${c3}
+           ${c2}GGGCC${c3}
+         ${c1}.${c3}/  \| ^G&&\:.
+       ${c1}G@@C${c3}  |\    ^*\..& ${c1}CGC
+      ${c1}C@@GC${c3}   \|        ${c1}C@@@@CC${c3}
+      ${c1} CC${c3}     |\        ${c1}C@@@@@C${c3}
+               \|        ${c1}CNNC${c3}
+               |\${c1}
+               MMMH
+              GMMMMG
+               MMMM
+EOF
+            ;;
             esac
         ;;
     esac
